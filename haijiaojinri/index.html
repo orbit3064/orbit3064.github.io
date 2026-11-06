@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>海角今日回家地址-海角今日回家地址发布页_海角社区回家线路地址</title>
+<meta name="description" content="海角今日回家地址发布页，汇总海角今日回家地址常用线路与入口说明，提供社区最新地址的查看方式、访问注意事项与常见问题解答。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f1b2d'/%3E%3Cpath d='M12 44 L28 18 L38 32 L46 22 L54 44 Z' fill='%23ffb648'/%3E%3Ccircle cx='46' cy='16' r='5' fill='%23ff6b5e'/%3E%3C/svg%3E">
+<style>
+:root{
+  --ink:#0f1b2d;
+  --ink-2:#1f2f45;
+  --paper:#f6f3ec;
+  --paper-2:#efeae0;
+  --line:#ddd5c6;
+  --amber:#e8942a;
+  --amber-deep:#c4701a;
+  --coral:#e15a4a;
+  --muted:#5c6577;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,sans-serif;
+  background:var(--paper);
+  color:var(--ink-2);
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none;}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px;}
+
+/* ---------- header ---------- */
+header{
+  position:sticky;top:0;z-index:50;
+  background:rgba(246,243,236,.94);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--line);
+}
+.nav{
+  display:flex;align-items:center;justify-content:space-between;
+  height:66px;gap:16px;
+}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700;color:var(--ink);font-size:16px;letter-spacing:.2px;}
+.brand svg{flex:none;}
+.nav-links{display:flex;gap:22px;font-size:14px;color:var(--muted);}
+.nav-links a{padding:4px 0;border-bottom:2px solid transparent;transition:.2s;}
+.nav-links a:hover{color:var(--ink);border-bottom-color:var(--amber);}
+.nav-cta{
+  font-size:13.5px;font-weight:600;color:#fff;background:var(--ink);
+  padding:8px 16px;border-radius:8px;white-space:nowrap;
+}
+.nav-cta:hover{background:var(--amber-deep);}
+.menu-btn{display:none;background:none;border:1px solid var(--line);border-radius:8px;padding:6px 10px;font-size:14px;color:var(--ink);}
+
+/* ---------- hero ---------- */
+.hero{
+  background:linear-gradient(168deg,#0f1b2d 0%,#1a2b44 58%,#24395a 100%);
+  color:#f2eee4;
+  padding:64px 0 72px;
+  position:relative;overflow:hidden;
+}
+.hero::after{
+  content:"";position:absolute;right:-120px;top:-120px;width:420px;height:420px;
+  background:radial-gradient(circle,rgba(232,148,42,.30),transparent 68%);
+  pointer-events:none;
+}
+.hero-grid{display:grid;grid-template-columns:1.25fr .9fr;gap:48px;align-items:center;position:relative;z-index:1;}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:12.5px;letter-spacing:.14em;color:#ffcf8f;
+  border:1px solid rgba(255,207,143,.35);border-radius:999px;padding:4px 12px;margin-bottom:20px;
+}
+.eyebrow .dot{width:6px;height:6px;border-radius:50%;background:var(--coral);}
+h1{
+  font-size:clamp(27px,4vw,40px);line-height:1.28;font-weight:800;
+  letter-spacing:.5px;color:#fff;margin-bottom:18px;
+}
+.hero p.lead{font-size:15.5px;color:#cfd6e2;max-width:34em;margin-bottom:26px;}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;}
+.btn{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:12px 22px;border-radius:10px;font-size:14.5px;font-weight:600;
+  transition:.2s;
+}
+.btn-primary{background:var(--amber);color:#1a1305;}
+.btn-primary:hover{background:#ffb648;}
+.btn-ghost{border:1px solid rgba(255,255,255,.28);color:#e8e4da;}
+.btn-ghost:hover{border-color:var(--amber);color:#ffcf8f;}
+
+.hero-card{
+  background:rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.14);
+  border-radius:16px;padding:22px;
+  backdrop-filter:blur(4px);
+}
+.hero-card h2{font-size:14px;font-weight:600;color:#ffcf8f;letter-spacing:.06em;margin-bottom:14px;}
+.line-list{list-style:none;display:flex;flex-direction:column;gap:10px;}
+.line-list li{
+  display:flex;justify-content:space-between;align-items:center;
+  font-size:13.5px;color:#dbe1ea;
+  background:rgba(255,255,255,.05);border-radius:8px;padding:9px 12px;
+}
+.tag{font-size:11.5px;padding:2px 8px;border-radius:999px;font-weight:600;}
+.tag.ok{background:rgba(120,200,140,.18);color:#8fe0a6;}
+.tag.wait{background:rgba(255,180,72,.16);color:#ffcf8f;}
+.hero-note{margin-top:14px;font-size:12px;color:#93a0b3;line-height:1.6;}
+
+/* ---------- section common ---------- */
+section{padding:62px 0;}
+.sec-head{margin-bottom:32px;}
+.sec-kicker{font-size:12.5px;letter-spacing:.16em;color:var(--amber-deep);font-weight:700;margin-bottom:8px;}
+h2.sec-title{font-size:clamp(21px,2.6vw,27px);color:var(--ink);font-weight:800;letter-spacing:.3px;}
+.sec-desc{margin-top:10px;font-size:15px;color:var(--muted);max-width:44em;}
+
+/* ---------- notice strip ---------- */
+.notice{
+  background:var(--paper-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+  padding:18px 0;
+}
+.notice-inner{display:flex;gap:14px;align-items:flex-start;font-size:14px;color:var(--ink-2);}
+.notice svg{flex:none;margin-top:4px;}
+.notice b{color:var(--amber-deep);}
+
+/* ---------- steps ---------- */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;}
+.step{
+  background:#fff;border:1px solid var(--line);border-radius:14px;padding:22px 18px;
+  position:relative;
+}
+.step .num{
+  font-size:13px;font-weight:800;color:var(--amber-deep);
+  border:1px solid rgba(196,112,26,.3);border-radius:8px;
+  width:30px;height:30px;display:flex;align-items:center;justify-content:center;margin-bottom:14px;
+}
+.step h3{font-size:15.5px;color:var(--ink);margin-bottom:7px;font-weight:700;}
+.step p{font-size:13.5px;color:var(--muted);line-height:1.68;}
+
+/* ---------- lines table / cards ---------- */
+.line-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
+.line-card{
+  background:#fff;border:1px solid var(--line);border-radius:14px;padding:20px;
+  display:flex;flex-direction:column;gap:10px;
+}
+.line-card .top{display:flex;justify-content:space-between;align-items:center;}
+.line-card h3{font-size:15.5px;color:var(--ink);font-weight:700;}
+.line-card p{font-size:13.5px;color:var(--muted);line-height:1.68;flex:1;}
+.line-card .meta{font-size:12px;color:#8a8f9c;}
+.line-card a.enter{
+  align-self:flex-start;font-size:13.5px;font-weight:600;color:var(--amber-deep);
+  border-bottom:1px solid rgba(196,112,26,.35);padding-bottom:2px;
+}
+.line-card a.enter:hover{color:var(--ink);border-bottom-color:var(--ink);}
+
+/* ---------- faq ---------- */
+.faq-wrap{display:grid;grid-template-columns:.85fr 1.15fr;gap:40px;align-items:start;}
+.faq-list{display:flex;flex-direction:column;gap:12px;}
+details{
+  background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px 18px;
+}
+details[open]{border-color:rgba(232,148,42,.55);}
+summary{
+  cursor:pointer;font-size:15px;font-weight:700;color:var(--ink);
+  list-style:none;display:flex;justify-content:space-between;gap:12px;align-items:center;
+}
+summary::-webkit-details-marker{display:none;}
+summary::after{content:"+";font-size:18px;color:var(--amber-deep);font-weight:400;}
+details[open] summary::after{content:"–";}
+details p{margin-top:10px;font-size:14px;color:var(--muted);line-height:1.75;}
+
+/* ---------- tips / text block ---------- */
+.tips{
+  background:#fff;border:1px solid var(--line);border-radius:16px;padding:32px;
+  display:grid;grid-template-columns:repeat(2,1fr);gap:26px 36px;
+}
+.tips h3{font-size:15.5px;color:var(--ink);margin-bottom:8px;font-weight:700;display:flex;gap:8px;align-items:center;}
+.tips h3 span{width:7px;height:7px;border-radius:2px;background:var(--coral);display:inline-block;}
+.tips p{font-size:14px;color:var(--muted);line-height:1.78;}
+
+/* ---------- download ---------- */
+.download{
+  background:linear-gradient(140deg,#1a2b44,#0f1b2d);
+  border-radius:18px;color:#e9e5db;padding:38px 34px;
+  display:flex;justify-content:space-between;align-items:center;gap:26px;flex-wrap:wrap;
+}
+.download h2{font-size:21px;color:#fff;margin-bottom:8px;font-weight:800;}
+.download p{font-size:14px;color:#b8c2d1;max-width:36em;}
+.btn-dl{
+  background:var(--amber);color:#1a1305;padding:13px 28px;border-radius:10px;
+  font-weight:700;font-size:14.5px;pointer-events:none;opacity:.92;
+  display:inline-flex;align-items:center;gap:8px;
+}
+
+/* ---------- footer ---------- */
+footer{
+  background:#0c1626;color:#9aa6b8;padding:44px 0 30px;font-size:13.5px;
+}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:32px;padding-bottom:28px;border-bottom:1px solid rgba(255,255,255,.1);}
+footer .brand{color:#f1ede3;margin-bottom:12px;}
+footer p{line-height:1.8;max-width:30em;}
+.foot-col h4{font-size:13px;color:#e6e2d8;letter-spacing:.08em;margin-bottom:12px;font-weight:700;}
+.foot-col a{display:block;padding:4px 0;color:#9aa6b8;transition:.2s;}
+.foot-col a:hover{color:var(--amber);}
+.copy{padding-top:22px;font-size:12.5px;color:#6c788c;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;}
+
+/* ---------- responsive ---------- */
+@media (max-width:900px){
+  .hero-grid{grid-template-columns:1fr;gap:34px;}
+  .steps{grid-template-columns:repeat(2,1fr);}
+  .line-grid{grid-template-columns:1fr 1fr;}
+  .faq-wrap{grid-template-columns:1fr;gap:26px;}
+  .tips{grid-template-columns:1fr;padding:26px;}
+  .foot-grid{grid-template-columns:1fr 1fr;}
+}
+@media (max-width:640px){
+  .nav-links{
+    display:none;position:absolute;top:66px;left:0;right:0;
+    background:var(--paper);border-bottom:1px solid var(--line);
+    flex-direction:column;gap:0;padding:8px 22px 16px;
+  }
+  .nav-links.open{display:flex;}
+  .nav-links a{padding:11px 0;border-bottom:1px solid var(--line);}
+  .nav-cta{display:none;}
+  .menu-btn{display:block;}
+  .hero{padding:44px 0 52px;}
+  section{padding:46px 0;}
+  .steps,.line-grid{grid-template-columns:1fr;}
+  .download{padding:28px 22px;}
+  .foot-grid{grid-template-columns:1fr;}
+  .copy{flex-direction:column;gap:6px;}
+}
+</style>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a href="#top" class="brand" aria-label="海角今日回家地址">
+      <svg width="30" height="30" viewBox="0 0 64 64" aria-hidden="true">
+        <rect width="64" height="64" rx="14" fill="#0f1b2d"/>
+        <path d="M12 44 L28 18 L38 32 L46 22 L54 44 Z" fill="#ffb648"/>
+        <circle cx="46" cy="16" r="5" fill="#ff6b5e"/>
+      </svg>
+      海角今日回家地址
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#lines">线路说明</a>
+      <a href="#steps">回家步骤</a>
+      <a href="#faq">常见问题</a>
+      <a href="#tips">访问提示</a>
+    </nav>
+    <a href="#lines" class="nav-cta">查看今日线路</a>
+    <button class="menu-btn" id="menuBtn" aria-label="展开导航" aria-expanded="false">菜单</button>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow"><span class="dot"></span>今日发布页 · 线路随时更新</span>
+        <h1>海角今日回家地址</h1>
+        <p class="lead">
+          海角今日回家地址是社区用户每天最先确认的一条信息。本页把当天可用的回家线路、进入方式与访问提示集中在一处，
+          方便你按顺序核对，再选择合适的一条继续浏览。
+        </p>
+        <div class="hero-actions">
+          <a href="#lines" class="btn btn-primary">
+            查看今日线路
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a href="#steps" class="btn btn-ghost">回家操作步骤</a>
+        </div>
+      </div>
+
+      <aside class="hero-card">
+        <h2>今日线路状态速览</h2>
+        <ul class="line-list">
+          <li><span>主线路 A</span><span class="tag ok">可用</span></li>
+          <li><span>备用线路 B</span><span class="tag ok">可用</span></li>
+          <li><span>移动网络线路 C</span><span class="tag wait">待确认</span></li>
+          <li><span>镜像发布页</span><span class="tag ok">可用</span></li>
+        </ul>
+        <p class="hero-note">
+          线路状态以发布页当日标注为准，遇到无法打开时优先切换备用线路，不要反复刷新同一地址。
+        </p>
+      </aside>
+    </div>
+  </div>
+
+  <!-- NOTICE -->
+  <div class="notice">
+    <div class="wrap notice-inner">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#c4701a" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16.5v.5"/></svg>
+      <p><b>回家提醒：</b>海角今日回家地址每天可能变化，收藏本发布页比收藏具体线路更稳妥；进入后若提示页面不存在，请回到本页重新选择入口。</p>
+    </div>
+  </div>
+
+  <!-- LINES -->
+  <section id="lines">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-kicker">TODAY · 线路入口</div>
+        <h2 class="sec-title">今日可用的回家线路与入口说明</h2>
+        <p class="sec-desc">
+          下面按网络环境分类列出入口，每条线路承担的访问场景不同：主线路适合日常浏览，备用线路用于主线路拥堵时切换，
+          移动线路则针对手机流量环境做了适配。
+        </p>
+      </div>
+      <div class="line-grid">
+        <article class="line-card">
+          <div class="top"><h3>主线路 A</h3><span class="tag ok">可用</span></div>
+          <p>日常首选入口，页面加载完整，适合在家庭宽带下使用。若打开缓慢，先等待数秒再判断是否失效。</p>
+          <div class="meta">适配：宽带 / Wi-Fi</div>
+          <a class="enter" href="#lines">从主线路进入</a>
+        </article>
+        <article class="line-card">
+          <div class="top"><h3>备用线路 B</h3><span class="tag ok">可用</span></div>
+          <p>主线路访问异常时的第一替代方案，内容与主线路一致，切换后无需重新确认账号状态。</p>
+          <div class="meta">适配：宽带 / 4G</div>
+          <a class="enter" href="#lines">从备用线路进入</a>
+        </article>
+        <article class="line-card">
+          <div class="top"><h3>移动网络线路 C</h3><span class="tag wait">待确认</span></div>
+          <p>面向手机流量用户，部分运营商下可能短暂不可达，建议与 Wi-Fi 环境交替测试后再使用。</p>
+          <div class="meta">适配：移动流量</div>
+          <a class="enter" href="#lines">查看线路状态</a>
+        </article>
+        <article class="line-card">
+          <div class="top"><h3>镜像发布页</h3><span class="tag ok">可用</span></div>
+          <p>当主域名无法解析时，镜像页会同步当天的海角今日回家地址，可作为长期收藏的固定入口。</p>
+          <div class="meta">适配：全部网络</div>
+          <a class="enter" href="#lines">打开镜像页</a>
+        </article>
+        <article class="line-card">
+          <div class="top"><h3>手机端快捷入口</h3><span class="tag ok">可用</span></div>
+          <p>为小屏浏览优化，进入后自动适配单列排版，适合在通勤途中快速查看当天内容。</p>
+          <div class="meta">适配：iOS / Android</div>
+          <a class="enter" href="#lines">使用快捷入口</a>
+        </article>
+        <article class="line-card">
+          <div class="top"><h3>备用域名组</h3><span class="tag ok">可用</span></div>
+          <p>一组轮换域名，当单条线路全部失效时按顺序尝试，通常前两条即可恢复正常访问。</p>
+          <div class="meta">适配：全部网络</div>
+          <a class="enter" href="#lines">查看域名组</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- STEPS -->
+  <section id="steps" style="background:var(--paper-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-kicker">HOW TO · 回家流程</div>
+        <h2 class="sec-title">四步确认海角今日回家地址是否可用</h2>
+        <p class="sec-desc">把流程拆成固定动作，可以减少反复试错。以下步骤按顺序执行，多数情况下两步内即可完成。</p>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <div class="num">01</div>
+          <h3>打开发布页</h3>
+          <p>先回到本页确认当天的海角今日回家地址标注，不要直接使用几天前保存的旧链接。</p>
+        </div>
+        <div class="step">
+          <div class="num">02</div>
+          <h3>核对线路状态</h3>
+          <p>查看线路列表中的可用标记，优先选择标注为可用的入口，待确认线路暂不优先尝试。</p>
+        </div>
+        <div class="step">
+          <div class="num">03</div>
+          <h3>选择合适入口</h3>
+          <p>宽带环境用主线路，手机流量用移动线路；若打开空白或报错，立刻切换到备用线路。</p>
+        </div>
+        <div class="step">
+          <div class="num">04</div>
+          <h3>进入后收藏</h3>
+          <p>成功进入后收藏本发布页而非具体地址，下次回家时重新确认海角今日回家地址即可。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="wrap faq-wrap">
+      <div class="sec-head" style="margin-bottom:0;">
+        <div class="sec-kicker">FAQ · 常见疑问</div>
+        <h2 class="sec-title">关于回家地址的常见问题</h2>
+        <p class="sec-desc">
+          线路失效、页面空白、地址频繁变化，是用户反馈最多的三类情况。以下回答按实际访问场景整理，便于快速定位问题。
+        </p>
+      </div>
+      <div class="faq-list">
+        <details open>
+          <summary>海角今日回家地址为什么会变化？</summary>
+          <p>发布地址会因线路调整、域名轮换等原因更新，因此每天的入口可能不同。以本发布页当天标注为准，是判断地址是否有效的最直接方式。</p>
+        </details>
+        <details>
+          <summary>主线路打不开应该先做什么？</summary>
+          <p>先不要反复刷新同一地址。直接切到备用线路 B，若备用线路正常，说明主线路处于临时不可用状态，稍后回到本页查看状态变化即可。</p>
+        </details>
+        <details>
+          <summary>手机流量无法进入怎么办？</summary>
+          <p>部分运营商对线路的解析存在差异，可以尝试切换到 Wi-Fi，或改用移动网络线路 C。若两种环境都失败，再尝试镜像发布页。</p>
+        </details>
+        <details>
+          <summary>页面显示空白或加载不完整？</summary>
+          <p>通常是网络中断或线路拥堵导致。更换线路后重新打开，多数情况下可以恢复正常；若依旧空白，建议清空浏览器缓存再试。</p>
+        </details>
+        <details>
+          <summary>需要每天重新查找回家地址吗？</summary>
+          <p>建议每天从本发布页确认一次。收藏本页后，打开即可看到当天的海角今日回家地址与线路状态，不必依赖记忆中的旧链接。</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- TIPS -->
+  <section id="tips" style="padding-top:0;">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-kicker">NOTES · 访问提示</div>
+        <h2 class="sec-title">让回家过程更稳定的几点做法</h2>
+      </div>
+      <div class="tips">
+        <div>
+          <h3><span></span>固定收藏发布页</h3>
+          <p>把本页加入浏览器书签，比记住具体域名更可靠。海角今日回家地址更新后，发布页仍保持不变。</p>
+        </div>
+        <div>
+          <h3><span></span>按顺序尝试线路</h3>
+          <p>主线路、备用线路、镜像页依次尝试，避免在同一地址上反复操作，能更快找到可用入口。</p>
+        </div>
+        <div>
+          <h3><span></span>区分网络环境</h3>
+          <p>宽带与移动流量对线路的解析结果可能不同，遇到问题时切换网络往往比更换浏览器更有效。</p>
+        </div>
+        <div>
+          <h3><span></span>留意页面提示</h3>
+          <p>线路状态标注反映当日情况，看到待确认标记时不必急于尝试，优先使用标注可用的入口。</p>
+        </div>
+        <div>
+          <h3><span></span>保持浏览器整洁</h3>
+          <p>过期缓存与多余插件会影响加载，定期清理可减少页面空白、样式错乱等偶发问题。</p>
+        </div>
+        <div>
+          <h3><span></span>不轻信第三方链接</h3>
+          <p>只使用本页列出的入口，来源不明的所谓回家地址可能指向无关页面，增加访问风险。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DOWNLOAD -->
+  <section style="padding-top:0;">
+    <div class="wrap">
+      <div class="download">
+        <div>
+          <h2>保存一份发布页说明</h2>
+          <p>把线路说明与访问步骤保存到本地，离线时也能按流程核对。文件内容与本页一致，便于随时查阅。</p>
+        </div>
+        <a class="btn-dl" href="#" data-download-placeholder="true" aria-disabled="true" tabindex="-1">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M12 4v11M7 12l5 5 5-5M5 20h14"/></svg>
+          下载
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="brand">
+          <svg width="26" height="26" viewBox="0 0 64 64" aria-hidden="true">
+            <rect width="64" height="64" rx="14" fill="#1a2b44"/>
+            <path d="M12 44 L28 18 L38 32 L46 22 L54 44 Z" fill="#ffb648"/>
+            <circle cx="46" cy="16" r="5" fill="#ff6b5e"/>
+          </svg>
+          海角今日回家地址
+        </div>
+        <p>本页汇总每天可用的回家线路与入口说明，帮助用户按流程确认地址、切换线路并稳定进入社区。</p>
+      </div>
+      <div class="foot-col">
+        <h4>页面导航</h4>
+        <a href="#lines">线路说明</a>
+        <a href="#steps">回家步骤</a>
+        <a href="#faq">常见问题</a>
+        <a href="#tips">访问提示</a>
+      </div>
+      <div class="foot-col">
+        <h4>常用入口</h4>
+        <a href="#lines">主线路 A</a>
+        <a href="#lines">备用线路 B</a>
+        <a href="#lines">镜像发布页</a>
+        <a href="#lines">移动网络线路 C</a>
+      </div>
+    </div>
+    <div class="copy">
+      <span>海角今日回家地址 · 每日线路发布页</span>
+      <span>线路状态以当日标注为准，请以本页信息为参考。</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var btn = document.getElementById('menuBtn');
+  var links = document.getElementById('navLinks');
+  if(btn && links){
+    btn.addEventListener('click', function(){
+      var open = links.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    links.addEventListener('click', function(e){
+      if(e.target.tagName === 'A'){
+        links.classList.remove('open');
+        btn.setAttribute('aria-expanded','false');
+      }
+    });
+  }
+})();
+</script>
+</body>
+</html>
